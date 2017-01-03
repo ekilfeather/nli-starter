@@ -33,6 +33,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'guard-rubocop'
   gem 'hub', :require=>nil
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
