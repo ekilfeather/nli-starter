@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) do |repo_name|
-  repo_name = "
-  "https://github.com/
+  repo_name = "https://github.com/ekilfeather/nli-starter"
 end
 ruby '2.2.2'
 gem 'rails', '~> 5.0.1'
@@ -24,6 +23,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'devise'
+gem 'devise_ldap_authenticatable'
 gem 'high_voltage'
 gem 'pg'
 group :development do
@@ -32,6 +32,7 @@ group :development do
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'guard-livereload', '~> 2.5', require: false
   gem 'hub', :require=>nil
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
@@ -52,6 +53,7 @@ group :production do
   gem 'passenger'
 end
 group :test do
+  gem 'cucumber'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
