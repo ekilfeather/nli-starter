@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) do |repo_name|
-  repo_name = "https://github.com/ekilfeather/nli-starter"
+  repo_name = 'https://github.com/ekilfeather/nli-starter'
 end
 ruby '2.2.2'
 gem 'rails', '~> 5.0.1'
@@ -30,9 +30,9 @@ group :development do
   gem 'better_errors'
   gem 'foreman'
   gem 'guard-bundler'
+  gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-rubocop'
   gem 'hub', :require=>nil
   gem 'rails_layout'
