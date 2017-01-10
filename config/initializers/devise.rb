@@ -1,18 +1,29 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  # ==> LDAP Configuration 
+  # config.ldap_logger = true
+  # config.ldap_create_user = false
+  # config.ldap_update_password = true
+  # config.ldap_config = "#{Rails.root}/config/ldap.yml"
+  # config.ldap_check_group_membership = false
+  # config.ldap_check_group_membership_without_admin = false
+  # config.ldap_check_attributes = false
+  # config.ldap_use_admin_to_bind = false
+  # config.ldap_ad_group_check = false
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'a032928d2682073553c1add0785da7bcd5cf580568f0882b9f843b989f8cdc281dcb233e3bfed7e045a37d54ad6924a5f74dfa6cd6483b350df67b15d4f8c367'
+  # config.secret_key = '28ad31d275eb007c3b03b5c36d730d87dd66815caecf71367cfa7e85b401d95545ba547c46ad921681881d4a2a6cbce9066c93517fab0515e4100dc87fc136cf'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'no-reply@' + Rails.application.secrets.domain_name
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -108,7 +119,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'c8e9869151d57c720f57600b9481a01b7174fa4af9d5e56b754673c9b680ffeb0f66369346637f664c60f84c68392a447e6f4c4662a0eb89aa63fef2252c1602'
+  # config.pepper = 'c02e0c6f70b55e2d0b6fd84e683789293aae28dc53c06fdba35c7ec09d58eadbb067c1157b62c6dce4a6299fbf3dd33ab9260f2359eb2da934ce0a9832d66614'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
